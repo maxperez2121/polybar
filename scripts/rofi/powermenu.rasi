@@ -1,0 +1,83 @@
+configuration {
+    modi:                           "run";
+	font:							"MesloLGS NF Regular 14";
+    show-icons:                     true;
+    disable-history:                false;
+    fullscreen:                     false;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+    background-color:               #2c2c34;
+    kb-row-up:                      "Up,k";
+    kb-row-down:                    "Down,j";
+    opacity:                        75;
+}
+
+@import "colors.rasi"
+
+window {
+    transparency:                   "real";
+    background-color:               @bg;
+    text-color:                     @fg;
+	border:							0px;
+	border-color:					@ac;
+    border-radius:                  0px;
+	width:							1000px;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    enabled: 						true;
+	padding: 						10px 15px 10px 15px;
+	background-color: 				@bg2;
+	text-color: 					#FFFFFF;
+	font:							"MesloLGS Regular 14";
+}
+
+textbox-prompt-colon {
+    enabled:                        false;
+}
+
+inputbar {
+    enabled:                        false;
+}
+
+listview {
+    background-color:               #2c2c34;
+    padding:                        0px;
+    columns:                        5;
+    lines:                          1;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @al;
+	border:							0px;
+    border-radius:                  0px;
+	border-color:					@bg4;
+    children:                       [ inputbar, listview ];
+    spacing:                       	0px;
+    padding:                        0px;
+}
+
+element {
+	font:							"MesloLGS NF Regular 50";
+    background-color:               @al;
+    text-color:                     #807bc1;
+    orientation:                    vertical;
+    border-radius:                  0px;
+    padding:                        0px 0px 0px 0px;
+}
+
+element-icon {
+    enabled:                        false;
+    size:                           0px;
+    border:                         0px;
+}
+
+element selected {
+    text-color:                     #feafaf;
+}
